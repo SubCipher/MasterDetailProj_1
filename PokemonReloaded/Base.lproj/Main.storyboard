@@ -13,13 +13,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="n03-EU-K9L">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="n03-EU-K9L">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n03-EU-K9L" id="Yur-y0-iHS">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="02L-53-ABz" kind="show" id="M8L-1M-9ka"/>
+                                    <segue destination="02L-53-ABz" kind="show" identifier="cellSegueShow" id="M8L-1M-9ka"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -33,7 +33,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5N-q0-LCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-44" y="84"/>
+            <point key="canvasLocation" x="-38" y="17"/>
         </scene>
         <!--Pokemon DetailVC-->
         <scene sceneID="gen-Vq-NvO">

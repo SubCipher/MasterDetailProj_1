@@ -10,7 +10,7 @@
 
 @interface PokemonDetailVC : UIViewController
 
-@property int pokemonCharacterNumber;
+@property NSInteger pokemonCharacterNumber;
 
 
 @property (strong,nonatomic)NSString *pokemonCharacterName;

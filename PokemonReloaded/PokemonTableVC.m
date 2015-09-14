@@ -9,9 +9,12 @@
 #import "PokemonTableVC.h"
 #import "PokemonDetailVC.h"
 
+@interface PokemonTableVC()
 
+@end
 
 @implementation PokemonTableVC
+@synthesize pokemonCharacterList;
 
 -(id)initWithStyle:(UITableViewStyle)style
 {
@@ -23,10 +26,13 @@
     return self;
     
 }
+
+
+
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    _pokemonCharactersList = [[NSArray alloc]initWithObjects:
+    pokemonCharacterList = [[NSArray alloc]initWithObjects:
                             @"Abra",
                             @"Aerodactyl",
                             @"Alakazam",
@@ -179,10 +185,15 @@
                             @"Zapdos",
                             @"Zubat",
                             nil];
+    
+    
+    self.title = @"someTitle";
 }
 
 
--(void)viewDidUnload{
+-(void)viewDidUnload
+
+{
     [super viewDidUnload];
     
 }
@@ -203,10 +214,9 @@
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:
-(NSInteger)section
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _pokemonCharactersList.count;
+    return pokemonCharacterList.count;
 }
 
 
@@ -225,7 +235,7 @@
     }
 
 
-cell.textLabel.text = [_pokemonCharactersList objectAtIndex:indexPath.row];
+cell.textLabel.text = [pokemonCharacterList objectAtIndex:indexPath.row];
 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 return cell;
 
@@ -234,14 +244,41 @@ return cell;
 
 #pragma mark - Table View 
 
--(void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    //create instance of VC
     PokemonDetailVC *DVC = [[PokemonDetailVC alloc]init];
     
+    //set the DVC to the destination VC of the segue
+    DVC = [segue destinationViewController];
     
-    [self.navigationController pushViewController: DVC  animated:YES];
+    //get the index path
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSString *theCharacter = [pokemonCharacterList objectAtIndex:path.row];
     
-    }
+    DVC.pokemonCharacterNumber =path.row;
+    DVC.pokemonCharacterName = theCharacter;
+}
+
+    
+
+
+
+
+
+
+
+//-(void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath
+//{
+//    PokemonDetailVC *DVC = [[PokemonDetailVC alloc]init];
+//    
+//    DVC.pokemonCharacterName = [pokemonCharacterList objectAtIndex:indexPath.row];
+//    DVC.pokemonCharacterNumber = [indexPath row];
+//    
+//    [self.navigationController pushViewController: DVC animated:YES];
+//    
+//    }
 
 
 
