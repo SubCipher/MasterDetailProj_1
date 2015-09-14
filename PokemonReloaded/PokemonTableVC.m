@@ -16,18 +16,6 @@
 @implementation PokemonTableVC
 @synthesize pokemonCharacterList;
 
-//-(id)initWithStyle:(UITableViewStyle)style
-//{
-//    self=[super initWithStyle:style];
-//    if (self) {
-//        
-//        
-//    }
-//    return self;
-//    
-//}
-//
-
 
 -(void)viewDidLoad
 {
@@ -36,7 +24,7 @@
     self.pokemonCharacterList = [[NSMutableArray alloc]init];
     
     pokemonCharacterList = @[
-                            @"Abra",
+
                             @"Aerodactyl",
                             @"Alakazam",
                             @"Arbok",
@@ -187,41 +175,31 @@
                             @"Wigglytuff",
                             @"Zapdos",
                             @"Zubat"];
-    
+
     
     self.title = @"someTitle";
 }
-
-
 -(void)viewDidUnload
 
 {
     [super viewDidUnload];
     
 }
-
-
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)
     interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-
 #pragma mark - Table view data source
-
 -(NSInteger )numberOfSectionsInTableView:(UITableView *)tableView
 {
     //return number of sections
     return 1;
 }
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return pokemonCharacterList.count;
 }
-
-
 -(UITableViewCell *)tableView: (UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"cellSegueShow";
@@ -262,14 +240,6 @@ return cell;
     DVC.pokemonCharacterNumber =path.row;
     DVC.pokemonCharacterName = theCharacter;
 }
-
-    
-
-
-
-
-
-
 
 //-(void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath
 //{

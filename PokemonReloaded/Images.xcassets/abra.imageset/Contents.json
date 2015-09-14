@@ -6,7 +6,12 @@
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
       "scale" : "2x"
+=======
+      "scale" : "2x",
+      "filename" : "abra@2x.png"
+>>>>>>> a96f25974857fa1d383b797c8390dee62eeeacf4
     },
     {
       "idiom" : "universal",

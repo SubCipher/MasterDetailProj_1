@@ -11,7 +11,6 @@
 @interface PokemonDetailVC : UIViewController
 
 @property NSInteger pokemonCharacterNumber;
-
 @property (strong,nonatomic)NSString *pokemonCharacterName;
 
 @property (strong,nonatomic) IBOutlet UIImageView *pokemonCharacterImage;

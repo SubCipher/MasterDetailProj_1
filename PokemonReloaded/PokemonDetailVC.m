@@ -14,26 +14,25 @@
 @end
 
 @implementation PokemonDetailVC
-
-@synthesize pokemonCharacterImage, pokemonCharacterName,pokemonCharacterNumber;
-
+@synthesize pokemonCharacterName,pokemonCharacterNumber;
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImage *pokemonImageSelection = [UIImage imageNamed: pokemonCharacterName];
     
-    self.title  =pokemonCharacterName;
-
 }
 
 -(void)viewDidUnload
 {
-    [self setPokemonCharacterImage:nil];
     [super viewDidUnload];
     
 }
 
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)
+interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
 
 
 #pragma mark - Table view data source
