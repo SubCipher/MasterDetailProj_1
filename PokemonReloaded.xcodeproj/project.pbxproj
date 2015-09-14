@@ -84,11 +84,11 @@
 		181F58AF1BA648A100C2A32C /* PokemonReloaded */ = {
 			isa = PBXGroup;
 			children = (
+				181F58BA1BA648A100C2A32C /* Main.storyboard */,
 				181F58B41BA648A100C2A32C /* AppDelegate.h */,
 				181F58B51BA648A100C2A32C /* AppDelegate.m */,
 				181F58D61BA649DA00C2A32C /* PokemonTableVC.h */,
 				181F58D71BA649DA00C2A32C /* PokemonTableVC.m */,
-				181F58BA1BA648A100C2A32C /* Main.storyboard */,
 				181F58D91BA653FC00C2A32C /* PokemonDetailVC.h */,
 				181F58DA1BA653FC00C2A32C /* PokemonDetailVC.m */,
 				181F58BD1BA648A100C2A32C /* Images.xcassets */,
@@ -424,6 +424,7 @@
 				181F58D21BA648A100C2A32C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		181F58D31BA648A100C2A32C /* Build configuration list for PBXNativeTarget "PokemonReloadedTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +433,7 @@
 				181F58D51BA648A100C2A32C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

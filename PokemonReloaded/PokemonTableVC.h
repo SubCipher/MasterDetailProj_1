@@ -10,7 +10,7 @@
 
 @interface PokemonTableVC : UITableViewController
 
-@property(strong,nonatomic)NSArray *pokemonCharactersList;
+@property(strong,nonatomic)NSArray *pokemonCharacterList;
 
 
 @end
